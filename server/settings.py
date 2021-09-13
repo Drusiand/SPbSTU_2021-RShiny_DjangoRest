@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 
 import django_heroku
+import os, subprocess, dj_database_url
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -73,16 +74,27 @@ WSGI_APPLICATION = 'server.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'YesNoGames',
-        'USER': 'postgres',
-        'PASSWORD': 'admin',
-        'HOST': '127.0.0.1',
-        'PORT': '5432'
-    }
-}
+
+bashCommand = "heroku config:get DATABASE_URL -a server"  # Use your app_name
+
+output = subprocess.check_output(['bash', '-c', bashCommand]).decode(
+    "utf-8")  # executing the bash command and converting byte to string
+
+DATABASES = {'default:':
+                 dj_database_url.config(default=output,
+                                        conn_max_age=600,
+                                        ssl_require=True)}
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'YesNoGames',
+#         'USER': 'postgres',
+#         'PASSWORD': 'admin',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432'
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
