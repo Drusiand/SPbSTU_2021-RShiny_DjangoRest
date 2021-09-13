@@ -1,0 +1,6 @@
+data <- read.csv("test_data_01.csv")
+ 
+res <- gsub(" ", "", data)
+res
+
+# as.numeric(data[[1]])

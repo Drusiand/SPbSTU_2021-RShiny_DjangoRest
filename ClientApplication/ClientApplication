@@ -1,0 +1,250 @@
+function (x, vars = NULL, opts = NULL, font.size = "10pt", dom = "fti", 
+    ...) 
+{
+    names_x <- names(x)
+    if (is.null(vars)) 
+        stop("'vars' must be specified!")
+    pos <- match(vars, names_x)
+    if (any(purrr::map_chr(x[, pos], typeof) == "list")) 
+        stop("list columns are not supported in datatable2()")
+    pos <- pos[pos <= ncol(x)] + 1
+    rownames(x) <- NULL
+    if (nrow(x) > 0) 
+        x <- cbind(` ` = "&oplus;", x)
+    opts <- c(opts, list(initComplete = DT::JS("function(settings, json) {", 
+        paste0("$(this.api().table().header()).css({'font-size': '", 
+            font.size, "'});"), "}"), class = "compact", dom = dom, 
+        pageLength = nrow(x), columnDefs = list(list(visible = FALSE, 
+            targets = c(0, pos)), list(orderable = FALSE, className = "details-control", 
+            targets = 1), list(className = "dt-left", targets = 1:3), 
+            list(className = "dt-right", targets = 4:ncol(x)))))
+    DT::datatable(x, ..., escape = -2, options = opts, callback = DT::JS(.callback2(x = x, 
+        pos = c(0, pos))))
+}
+<bytecode: 0x000001c676f01df8>
+<environment: namespace:varsExplore>
+function (x, vars = NULL, opts = NULL, font.size = "10pt", dom = "fti", 
+    ...) 
+{
+    names_x <- names(x)
+    if (is.null(vars)) 
+        stop("'vars' must be specified!")
+    pos <- match(vars, names_x)
+    if (any(purrr::map_chr(x[, pos], typeof) == "list")) 
+        stop("list columns are not supported in datatable2()")
+    pos <- pos[pos <= ncol(x)] + 1
+    rownames(x) <- NULL
+    if (nrow(x) > 0) 
+        x <- cbind(` ` = "&oplus;", x)
+    opts <- c(opts, list(initComplete = DT::JS("function(settings, json) {", 
+        paste0("$(this.api().table().header()).css({'font-size': '", 
+            font.size, "'});"), "}"), class = "compact", dom = dom, 
+        pageLength = nrow(x), columnDefs = list(list(visible = FALSE, 
+            targets = c(0, pos)), list(orderable = FALSE, className = "details-control", 
+            targets = 1), list(className = "dt-left", targets = 1:3), 
+            list(className = "dt-right", targets = 4:ncol(x)))))
+    DT::datatable(x, ..., escape = -2, options = opts, callback = DT::JS(.callback2(x = x, 
+        pos = c(0, pos))))
+}
+<bytecode: 0x000001c676f01df8>
+<environment: namespace:varsExplore>
+function (x, vars = NULL, opts = NULL, font.size = "10pt", dom = "fti", 
+    ...) 
+{
+    names_x <- names(x)
+    if (is.null(vars)) 
+        stop("'vars' must be specified!")
+    pos <- match(vars, names_x)
+    if (any(purrr::map_chr(x[, pos], typeof) == "list")) 
+        stop("list columns are not supported in datatable2()")
+    pos <- pos[pos <= ncol(x)] + 1
+    rownames(x) <- NULL
+    if (nrow(x) > 0) 
+        x <- cbind(` ` = "&oplus;", x)
+    opts <- c(opts, list(initComplete = DT::JS("function(settings, json) {", 
+        paste0("$(this.api().table().header()).css({'font-size': '", 
+            font.size, "'});"), "}"), class = "compact", dom = dom, 
+        pageLength = nrow(x), columnDefs = list(list(visible = FALSE, 
+            targets = c(0, pos)), list(orderable = FALSE, className = "details-control", 
+            targets = 1), list(className = "dt-left", targets = 1:3), 
+            list(className = "dt-right", targets = 4:ncol(x)))))
+    DT::datatable(x, ..., escape = -2, options = opts, callback = DT::JS(.callback2(x = x, 
+        pos = c(0, pos))))
+}
+<bytecode: 0x000001c676f01df8>
+<environment: namespace:varsExplore>
+function (x, vars = NULL, opts = NULL, font.size = "10pt", dom = "fti", 
+    ...) 
+{
+    names_x <- names(x)
+    if (is.null(vars)) 
+        stop("'vars' must be specified!")
+    pos <- match(vars, names_x)
+    if (any(purrr::map_chr(x[, pos], typeof) == "list")) 
+        stop("list columns are not supported in datatable2()")
+    pos <- pos[pos <= ncol(x)] + 1
+    rownames(x) <- NULL
+    if (nrow(x) > 0) 
+        x <- cbind(` ` = "&oplus;", x)
+    opts <- c(opts, list(initComplete = DT::JS("function(settings, json) {", 
+        paste0("$(this.api().table().header()).css({'font-size': '", 
+            font.size, "'});"), "}"), class = "compact", dom = dom, 
+        pageLength = nrow(x), columnDefs = list(list(visible = FALSE, 
+            targets = c(0, pos)), list(orderable = FALSE, className = "details-control", 
+            targets = 1), list(className = "dt-left", targets = 1:3), 
+            list(className = "dt-right", targets = 4:ncol(x)))))
+    DT::datatable(x, ..., escape = -2, options = opts, callback = DT::JS(.callback2(x = x, 
+        pos = c(0, pos))))
+}
+<bytecode: 0x000001c676f01df8>
+<environment: namespace:varsExplore>
+function (x, vars = NULL, opts = NULL, font.size = "10pt", dom = "fti", 
+    ...) 
+{
+    names_x <- names(x)
+    if (is.null(vars)) 
+        stop("'vars' must be specified!")
+    pos <- match(vars, names_x)
+    if (any(purrr::map_chr(x[, pos], typeof) == "list")) 
+        stop("list columns are not supported in datatable2()")
+    pos <- pos[pos <= ncol(x)] + 1
+    rownames(x) <- NULL
+    if (nrow(x) > 0) 
+        x <- cbind(` ` = "&oplus;", x)
+    opts <- c(opts, list(initComplete = DT::JS("function(settings, json) {", 
+        paste0("$(this.api().table().header()).css({'font-size': '", 
+            font.size, "'});"), "}"), class = "compact", dom = dom, 
+        pageLength = nrow(x), columnDefs = list(list(visible = FALSE, 
+            targets = c(0, pos)), list(orderable = FALSE, className = "details-control", 
+            targets = 1), list(className = "dt-left", targets = 1:3), 
+            list(className = "dt-right", targets = 4:ncol(x)))))
+    DT::datatable(x, ..., escape = -2, options = opts, callback = DT::JS(.callback2(x = x, 
+        pos = c(0, pos))))
+}
+<bytecode: 0x000001c676f01df8>
+<environment: namespace:varsExplore>
+function (x, vars = NULL, opts = NULL, font.size = "10pt", dom = "fti", 
+    ...) 
+{
+    names_x <- names(x)
+    if (is.null(vars)) 
+        stop("'vars' must be specified!")
+    pos <- match(vars, names_x)
+    if (any(purrr::map_chr(x[, pos], typeof) == "list")) 
+        stop("list columns are not supported in datatable2()")
+    pos <- pos[pos <= ncol(x)] + 1
+    rownames(x) <- NULL
+    if (nrow(x) > 0) 
+        x <- cbind(` ` = "&oplus;", x)
+    opts <- c(opts, list(initComplete = DT::JS("function(settings, json) {", 
+        paste0("$(this.api().table().header()).css({'font-size': '", 
+            font.size, "'});"), "}"), class = "compact", dom = dom, 
+        pageLength = nrow(x), columnDefs = list(list(visible = FALSE, 
+            targets = c(0, pos)), list(orderable = FALSE, className = "details-control", 
+            targets = 1), list(className = "dt-left", targets = 1:3), 
+            list(className = "dt-right", targets = 4:ncol(x)))))
+    DT::datatable(x, ..., escape = -2, options = opts, callback = DT::JS(.callback2(x = x, 
+        pos = c(0, pos))))
+}
+<bytecode: 0x000001c676f01df8>
+<environment: namespace:varsExplore>
+function (x, vars = NULL, opts = NULL, font.size = "10pt", dom = "fti", 
+    ...) 
+{
+    names_x <- names(x)
+    if (is.null(vars)) 
+        stop("'vars' must be specified!")
+    pos <- match(vars, names_x)
+    if (any(purrr::map_chr(x[, pos], typeof) == "list")) 
+        stop("list columns are not supported in datatable2()")
+    pos <- pos[pos <= ncol(x)] + 1
+    rownames(x) <- NULL
+    if (nrow(x) > 0) 
+        x <- cbind(` ` = "&oplus;", x)
+    opts <- c(opts, list(initComplete = DT::JS("function(settings, json) {", 
+        paste0("$(this.api().table().header()).css({'font-size': '", 
+            font.size, "'});"), "}"), class = "compact", dom = dom, 
+        pageLength = nrow(x), columnDefs = list(list(visible = FALSE, 
+            targets = c(0, pos)), list(orderable = FALSE, className = "details-control", 
+            targets = 1), list(className = "dt-left", targets = 1:3), 
+            list(className = "dt-right", targets = 4:ncol(x)))))
+    DT::datatable(x, ..., escape = -2, options = opts, callback = DT::JS(.callback2(x = x, 
+        pos = c(0, pos))))
+}
+<bytecode: 0x000001c676f01df8>
+<environment: namespace:varsExplore>
+function (x, vars = NULL, opts = NULL, font.size = "10pt", dom = "fti", 
+    ...) 
+{
+    names_x <- names(x)
+    if (is.null(vars)) 
+        stop("'vars' must be specified!")
+    pos <- match(vars, names_x)
+    if (any(purrr::map_chr(x[, pos], typeof) == "list")) 
+        stop("list columns are not supported in datatable2()")
+    pos <- pos[pos <= ncol(x)] + 1
+    rownames(x) <- NULL
+    if (nrow(x) > 0) 
+        x <- cbind(` ` = "&oplus;", x)
+    opts <- c(opts, list(initComplete = DT::JS("function(settings, json) {", 
+        paste0("$(this.api().table().header()).css({'font-size': '", 
+            font.size, "'});"), "}"), class = "compact", dom = dom, 
+        pageLength = nrow(x), columnDefs = list(list(visible = FALSE, 
+            targets = c(0, pos)), list(orderable = FALSE, className = "details-control", 
+            targets = 1), list(className = "dt-left", targets = 1:3), 
+            list(className = "dt-right", targets = 4:ncol(x)))))
+    DT::datatable(x, ..., escape = -2, options = opts, callback = DT::JS(.callback2(x = x, 
+        pos = c(0, pos))))
+}
+<bytecode: 0x000001c676f01df8>
+<environment: namespace:varsExplore>
+function (x, vars = NULL, opts = NULL, font.size = "10pt", dom = "fti", 
+    ...) 
+{
+    names_x <- names(x)
+    if (is.null(vars)) 
+        stop("'vars' must be specified!")
+    pos <- match(vars, names_x)
+    if (any(purrr::map_chr(x[, pos], typeof) == "list")) 
+        stop("list columns are not supported in datatable2()")
+    pos <- pos[pos <= ncol(x)] + 1
+    rownames(x) <- NULL
+    if (nrow(x) > 0) 
+        x <- cbind(` ` = "&oplus;", x)
+    opts <- c(opts, list(initComplete = DT::JS("function(settings, json) {", 
+        paste0("$(this.api().table().header()).css({'font-size': '", 
+            font.size, "'});"), "}"), class = "compact", dom = dom, 
+        pageLength = nrow(x), columnDefs = list(list(visible = FALSE, 
+            targets = c(0, pos)), list(orderable = FALSE, className = "details-control", 
+            targets = 1), list(className = "dt-left", targets = 1:3), 
+            list(className = "dt-right", targets = 4:ncol(x)))))
+    DT::datatable(x, ..., escape = -2, options = opts, callback = DT::JS(.callback2(x = x, 
+        pos = c(0, pos))))
+}
+<bytecode: 0x000001c676f01df8>
+<environment: namespace:varsExplore>
+function (x, vars = NULL, opts = NULL, font.size = "10pt", dom = "fti", 
+    ...) 
+{
+    names_x <- names(x)
+    if (is.null(vars)) 
+        stop("'vars' must be specified!")
+    pos <- match(vars, names_x)
+    if (any(purrr::map_chr(x[, pos], typeof) == "list")) 
+        stop("list columns are not supported in datatable2()")
+    pos <- pos[pos <= ncol(x)] + 1
+    rownames(x) <- NULL
+    if (nrow(x) > 0) 
+        x <- cbind(` ` = "&oplus;", x)
+    opts <- c(opts, list(initComplete = DT::JS("function(settings, json) {", 
+        paste0("$(this.api().table().header()).css({'font-size': '", 
+            font.size, "'});"), "}"), class = "compact", dom = dom, 
+        pageLength = nrow(x), columnDefs = list(list(visible = FALSE, 
+            targets = c(0, pos)), list(orderable = FALSE, className = "details-control", 
+            targets = 1), list(className = "dt-left", targets = 1:3), 
+            list(className = "dt-right", targets = 4:ncol(x)))))
+    DT::datatable(x, ..., escape = -2, options = opts, callback = DT::JS(.callback2(x = x, 
+        pos = c(0, pos))))
+}
+<bytecode: 0x000001c676f01df8>
+<environment: namespace:varsExplore>

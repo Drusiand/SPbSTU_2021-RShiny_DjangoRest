@@ -1,0 +1,26 @@
+{
+    "id": "90108E50",
+    "path": "~/ClientApplication/config.json",
+    "project_path": "config.json",
+    "type": "json",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1631546276891.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "2,42",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1631546782,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1631546782491,
+    "read_only": false,
+    "read_only_alternatives": []
+}
