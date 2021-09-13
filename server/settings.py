@@ -75,16 +75,6 @@ WSGI_APPLICATION = 'server.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 
-bashCommand = "heroku config:get DATABASE_URL -a server"  # Use your app_name
-
-output = subprocess.check_output(['bash', '-c', bashCommand]).decode(
-    "utf-8")  # executing the bash command and converting byte to string
-
-DATABASES = {'default:':
-                 dj_database_url.config(default=output,
-                                        conn_max_age=600,
-                                        ssl_require=True)}
-
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -95,6 +85,17 @@ DATABASES = {'default:':
 #         'PORT': '5432'
 #     }
 # }
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'demk2fvvgttb09',
+        'USER': 'vfqugmnywmktml',
+        'PASSWORD': 'defd834bb13af260a9eb62e70f43c7aa3e88272c4a5df1818efd6770bdd974fb',
+        'HOST': 'ec2-44-193-228-249.compute-1.amazonaws.com',
+        'PORT': '5432'
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
